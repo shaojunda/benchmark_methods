@@ -15,8 +15,8 @@ module BenchmarkMethods
 
   def self.log(report)
     if const_defined?("Rails")
-      Rails.logger.debug("  --> #{report.label}")
-      Rails.logger.debug("#{Benchmark::CAPTION}#{report.to_s}")
+      Rails.logger.info("  --> #{report.label}")
+      Rails.logger.info("#{Benchmark::CAPTION}#{report.to_s}")
     else
       puts("  --> #{report.label}")
       puts(Benchmark::CAPTION)
